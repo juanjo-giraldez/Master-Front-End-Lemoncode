@@ -1,0 +1,42 @@
+@import 'colourBox.scss';
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+$color-1-container: #537A5A;
+$color-2-container: #725AC1;
+$color-3-container: #F25F5C;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    overflow: auto;
+  }
+  
+
+  .box {
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding: 1.5em;
+    text-align: center;
+   
+
+    &-text {
+      color: white;
+      display: inline;
+    }
+  }
+}
+
+
+@include colourBox('block-one', $color-1-container);
+@include colourBox('block-two',$color-2-container);
+@include colourBox('block-three',$color-3-container);
+
+

@@ -1,0 +1,15 @@
+@mixin colourBox($block, $color) {
+  @for $i from 1 through 4 {
+    .#{$block} {
+      .darken-#{$i} {
+        background-color: darken($color, $i * 5%);
+      }
+      .lighten-#{$i} {
+        background-color: lighten($color, $i * 5%);
+      }
+      .box-base__color {
+        background-color: $color;
+      }
+    }
+  }
+}
