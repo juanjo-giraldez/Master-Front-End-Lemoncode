@@ -7,8 +7,17 @@
       .lighten-#{$i} {
         background-color: lighten($color, $i * 5%);
       }
-      .box-base__color {
-        background-color: $color;
+      .box {
+        &-base__color {
+          background-color: $color;
+          .box-text {
+            color: #fff;
+          }
+
+        }
+        &-text {
+          color: invert($color);
+        }
       }
     }
   }
