@@ -1,0 +1,39 @@
+@mixin themeColor($bg-b, $bg-i, $bg-w, $bg-s, $fontOne, $fontTwo, $Brd-r )  {
+    .square {
+      display: block;
+      width: 100%;
+      height: 6em;
+      padding: 2em;
+      text-align: start;
+      @if $Brd-r == true {
+        border-radius: 0.5em;
+      } 
+    }
+    
+    .theme {
+      &-base {
+        background: #{$bg-b,}
+      }
+      &-important {
+        background: #{$bg-i}
+      }
+      &-warning {
+        background: #{$bg-w}
+      }
+      &-shadow {
+          border: 1px solid #9a8c98;
+          box-shadow: #{$bg-s}
+      }
+    }
+  
+    .font {
+        &-first {
+            font-size:1.2em;
+            font-family: #{$fontOne};
+  
+        }
+        &-second {
+          font-family: #{$fontTwo};
+      }
+    }
+  }

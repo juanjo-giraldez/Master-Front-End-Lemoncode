@@ -1,0 +1,29 @@
+// @import 'colorA.scss';
+@import 'colorB.scss';
+@import 'mixins';
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$bg-b: var(--color-base); 
+$bg-i: var(--color-important); 
+$bg-w: var(--color-warning); 
+$bg-s: var(--shadow); 
+$fontOne: var(--fontOne); 
+$fontTwo: var(--fontTwo);
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-theme {
+    @include themeColor($bg-b, $bg-i, $bg-w, $bg-s, $fontOne, $fontTwo, $Brd-r );
+}
+
+
+
+
+
